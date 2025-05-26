@@ -26,19 +26,18 @@ class SystemVolumeControl:
         """Permite definir um valor máximo de dB personalizado."""
         self.target_max_db_override = max_db_value
         
-    def set_volume_percentage(self, percentage: float):
+    def set_volume_percentage(self, lenght: float, HAND_DIST_MIN: int, HAND_DIST_MAX: int):
         if self.volume is None:
             print("Controle de volume não inicializado")
-            return
+            return 0.0
+            
+        current_max_db = self.target_max_db_override if self.target_max_db_override is not None else self.max_db 
         
-        if not (0 <= percentage <= 100):
-            percentage = np.clip(percentage, 0, 100) 
-            
-            current_max_db = self.target_max_db_override if self.target_max_db_override is not None else self.max_db 
-            
-            vol_db = np.interp(current_max_db, [0, 100], [self.max_db, self.max_db]) #Verificar se não está invertido
+        vol_db = np.interp(lenght, [HAND_DIST_MIN, HAND_DIST_MAX], [self.min_db, current_max_db])
 
-            try:
-                self.volume.SetMasterVolumeLevel(vol_db, None)
-            except Exception as e:
-                	print(f"Erro ao definir o volume: {e}")
+        try:
+            self.volume.SetMasterVolumeLevel(vol_db, None)
+        except Exception as e:
+                print(f"Erro ao definir o volume: {e}")
+
+        return np.interp(lenght, [HAND_DIST_MIN, HAND_DIST_MAX], [0, 100])
