@@ -1,0 +1,60 @@
+# Arquivos de Bytecode e Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambientes Virtuais
+venv/
+env/
+.venv/
+.env/
+venv.bak/
+env.bak/
+
+# Arquivos de configuração de IDEs e editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+nbproject/
+.project
+.pydevproject
+.settings/
+*.DS_Store
+Thumbs.db
+
+# Arquivos de distribuição/build
+build/
+dist/
+sdist/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Arquivos de teste e cobertura
+.pytest_cache/
+.coverage
+.tox/
+htmlcov/
+.hypothesis/
+
+# Logs
+*.log
+logs/
+
+# Arquivos de configuração local (ex: senhas, chaves de API - crie um arquivo de exemplo)
+.env
+config.ini # Se contiver segredos, considere adicionar um config.example.ini ao repositório
+
+# Notebooks Jupyter - Checkpoints
+.ipynb_checkpoints
+
+# Arquivos específicos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Outros
+*.bak
+*.swp
+*.swo
