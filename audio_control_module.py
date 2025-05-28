@@ -11,7 +11,7 @@ class AudioControl():
         self.duration_seconds = None
 
     def load_audio(self, filepath, target_dtype='float32'):
-        if not os.path.exists(filepath):
+        if not filepath or not os.path.exists(filepath):
             print(f"Erro: Arquivo não encontrado em '{filepath}'")
             self._reset_attributes()
             return False
@@ -25,23 +25,24 @@ class AudioControl():
             self.sample_rate = sample_rate
 
             if self.audio_data.ndim == 1:
-                self.num_chennels = 1 # Mono
+                self.num_channels = 1 # Mono
             else:
-                self.num_chennels = audio_data.shape[1] # Pega o número de colunas (canais)
+                self.num_channels = audio_data.shape[1] # Pega o número de colunas (canais)
 
-            self.duration_seconds = len(self.audio_data) / self.sample_rate
+            if not self.sample_rate == 0:
+                self.duration_seconds = len(self.audio_data) / self.sample_rate
 
             print(f"\n--- Informações do Áudio Carregado ---")
             print(f"Arquivo: {os.path.basename(self.filepath)}")
             print(f"Taxa de Amostragem (sample rate): {self.sample_rate} Hz")
-            print(f"Número de Canais {self.num_chennels}")
+            print(f"Número de Canais {self.num_channels}")
             print(f"Duração: {self.duration_seconds:.2f} segundos")
-            print(f"Tipo de Dadp (dtype): {self.audio_data.dtype}")
+            print(f"Tipo de Dado (dtype): {self.audio_data.dtype}")
             print(f"Formato do Array (Shape): {self.audio_data.shape}")
 
             if audio_data.dtype == np.float32 or audio_data.dtype == np.float64:
                 print(f"Valores (Min, Max): {np.min(self.audio_data):.4f}, {np.max(self.audio_data):.4f}")
-            elif audio_data.dtype == np.float16:
+            elif audio_data.dtype == np.int16:
                 print(f"Valores (Min, Max): {np.min(self.audio_data)}, {np.max(self.audio_data)}")
 
             return True
@@ -50,11 +51,11 @@ class AudioControl():
             print(f"Erro ao ler o arquivo de áudio com soundfile: {e}")
             print(f"Verifique se o formato do arquivo é suportado ou se há dependências faltando (ex.: libsndfile, FFmpeg para MP3).")
             self._reset_attributes()
-            return None, None, None
+            return False
         except Exception as e:
             print(f"Ocorreu um erro inesperado ao carregar o áudio: {e}")
             self._reset_attributes()
-            return None, None, None
+            return False
     
     def _reset_attributes(self):
         self.filepath = None
