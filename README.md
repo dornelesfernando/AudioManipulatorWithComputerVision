@@ -16,7 +16,7 @@
   <a href="https://github.com/dornelesfernando/AudioManipulatorWithComputerVision"><strong>Explore os Arquivos »</strong></a>
   <br />
   <br />
-  <a href="#getting-started">Baixe e Execute</a>
+  <a href="#instalacao">Baixe e Execute</a>
   ·
   <a href="https://github.com/dornelesfernando/AudioManipulatorWithComputerVision/issues/new?template=bug-report-%F0%9F%90%9B.md">Reportar Bug</a>
   ·
@@ -197,7 +197,7 @@ Este projeto permite:
 
 ---
 
-<a id="planejamento"></a>
+<a id="roadmap"></a>
 ## 📍 Planejamento
 
 - [ ] Melhorar cadeia de filtros de áudio  
