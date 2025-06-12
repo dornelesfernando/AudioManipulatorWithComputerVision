@@ -209,7 +209,7 @@ if __name__ == '__main__':
                     h2cx_vol = (h2_thumb_x + h2_index_x) // 2
                     h2cy_vol = (h2_thumb_y + h2_index_y) // 2
 
-                    # --- LÓGICA DE VOLUME COM DUAS MÃOS (mantida) ---
+                    # --- LÓGICA DE VOLUME COM DUAS MÃOS ---
                     # A linha de conexão das mãos para volume agora será substituída pela waveform
                     # cv2.line(img, (h1cx_vol, h1cy_vol), (h2cx_vol, h2cy_vol), (255, 255, 255), 3) # <<< LINHA REMOVIDA/SUBSTITUÍDA
                     length_volume_two_hands = math.hypot(h2cx_vol - h1cx_vol, h2cy_vol - h1cy_vol)

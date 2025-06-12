@@ -1,0 +1,8 @@
+opencv-python
+sounddevice
+mediapipe
+pycaw
+soundfile
+yt-dlp
+pydub
+pedalboard
