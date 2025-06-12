@@ -9,7 +9,7 @@ import sounddevice as sd
 from hand_detector_module import HandDetector
 from volume_control_module import SystemVolumeControl
 from audio_control_module import AudioControl
-from reverb_control_module import ReverbControl # Classe que agora lida com Reverb e Delay
+from filter.reverb_delay_control_module import ReverbControl # Classe que agora lida com Reverb e Delay
 
 # --- Variáveis Globais para Reprodução de Áudio e Efeitos ---
 current_playback_frame = 0
