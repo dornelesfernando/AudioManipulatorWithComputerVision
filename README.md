@@ -33,7 +33,7 @@
   <ol>
     <li><a href="#sobre-o-projeto">Sobre o Projeto</a></li>
     <li><a href="#feito-com">Feito Com</a></li>
-    <li><a href="#instalação">Instalação</a></li>
+    <li><a href="#instalacao">Instalação</a></li>
     <li><a href="#uso">Uso</a></li>
     <li><a href="#gestos">Uso</a></li>
     <li><a href="#roadmap">Planejamento</a></li>
