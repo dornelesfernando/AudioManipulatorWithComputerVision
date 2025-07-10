@@ -35,7 +35,8 @@
     <li><a href="#feito-com">Feito Com</a></li>
     <li><a href="#instalacao">Instalação</a></li>
     <li><a href="#uso">Uso</a></li>
-    <li><a href="#gestos">Uso</a></li>
+    <li><a href="#gestos">Gestos</a></li>
+    <li><a href="#imagens">Imagens</a></li>  
     <li><a href="#roadmap">Planejamento</a></li>
     <li><a href="#licenca">Licença</a></li>
     <li><a href="#contato">Contato</a></li>
@@ -186,7 +187,7 @@ Este projeto permite:
 
 ---
 
-<a id="images"></a>
+<a id="imagens"></a>
 ## 📸 Imagens
 
 **Interface de Áudio:**  
