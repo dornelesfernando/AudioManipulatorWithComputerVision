@@ -130,6 +130,7 @@ if __name__ == '__main__':
             audio_loaded_successfully = False
     else:
         print(f"Falha ao carregar áudio. Funcionalidades de áudio desativadas.")
+        exit()
 
     # --- CONFIGURAÇÃO DA CÂMERA ---
     wCam, hCam = 1920, 1080

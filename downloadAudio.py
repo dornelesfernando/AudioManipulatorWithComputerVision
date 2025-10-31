@@ -77,7 +77,7 @@ def baixar_melhor_audio_youtube(url_video, diretorio_saida = "music"):
     
 if __name__ == "__main__":
     # 🔽🔽🔽 MODIFIQUE A LINHA ABAIXO PARA A URL DO VÍDEO DESEJADO 🔽🔽🔽
-    url_do_video_youtube = "https://youtu.be/iMq3lQFFHFw?si=dmfImNjwroRbnMI7" 
+    url_do_video_youtube = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     # Exemplo: url_do_video_youtube = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" # Substitua por uma URL real
     # 🔼🔼🔼 MODIFIQUE A LINHA ACIMA PARA A URL DO VÍDEO DESEJADO 🔼🔼🔼
 
